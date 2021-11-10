@@ -9,33 +9,46 @@
     <script src="https://unpkg.com/vue@next" defer></script>
     <script src="entryForm.js" defer></script>
 </head>
-<body>
+<body id="entry-form">
 	<header>
 		<h1>Share your location with your collegues!</h1>
 	</header>
 	<section id="search">
 		<p class="criteria">
-			<input type="text" placeholder="Where are you?">
-			<input type="checkbox" value=1>Offline</input>
+			<input type="text"
+					placeholder="Where are you?"
+					v-model="searchTerm">
+			<input type="checkbox"
+					v-model="offline">Offline</input>
 		</p>
 		<table cellspacing=0>
 			<thead>
 				<tr><th>Place</th><th>Country</th><th>Lat/Long</th><th></th></tr>
 			</thead>
 			<tbody>
-				<tr><td>les Escaldes</td><td>AD</td><td>42.50729, 1.53414</td><td><button>Select</button></td></tr>
+				<tr v-for="place in offlineLocations">
+					<td>{{ place.name }}</td>
+					<td>{{ place.country }}</td>
+					<td>{{ place.latitude }}, {{ place.longitude }}</td>
+					<td><button>Select</button></td>
+				</tr>
 			</tbody>
 		</table>
 	</section>
 	<hr>
-	<section>
+	<section id="pending-checkins">
 		<h2>Pending Checkins</h2>
 		<table cellspacing=0>
 			<thead>
 				<tr><th>Date/Time</th><th>Place</th><th>Country</th><th>Lat/Long</th></tr>
 			</thead>
 			<tbody>
-				<tr><td>2021-11-10 9:00 CST</td><td>Minneapolis, MN</td><td>US</td><td>44.98091981429454, -93.25336928755515</td></tr>
+				<tr v-for="checkin in pendingCheckins">
+					<td>{{ checkin.entryDateTime }}</td>
+					<td>{{ checkin.name }}</td>
+					<td>{{ checkin.country }}</td>
+					<td>{{ checkin.latitude }}, {{ checkin.longitude }}</td>
+				</tr>
 			</tbody>
 		</table>
 		<div class="button-actions">
@@ -50,7 +63,12 @@
 				<tr><th>Date/Time</th><th>Place</th><th>Country</th><th>Lat/Long</th></tr>
 			</thead>
 			<tbody>
-				<tr><td>2021-11-09 9:00 CST</td><td>Plymouth, MA</td><td>US</td><td>41.95837240768071, -70.66119558144052</td></tr>
+				<tr v-for="checkin in checkinHistory">
+					<td>{{ checkin.entryDateTime }}</td>
+					<td>{{ checkin.name }}</td>
+					<td>{{ checkin.country }}</td>
+					<td>{{ checkin.latitude }}, {{ checkin.longitude }}</td>
+				</tr>
 			</tbody>
 		</table>
 	</section>
