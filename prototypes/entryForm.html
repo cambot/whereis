@@ -25,12 +25,12 @@
 			<thead>
 				<tr><th>Place</th><th>Country</th><th>Lat/Long</th><th></th></tr>
 			</thead>
-			<tbody>
-				<tr v-for="place in offlineLocations">
+			<tbody v-if="searchTerm">
+				<tr v-for="place in offlineLocations" v-if="searchMatch(place)">
 					<td>{{ place.name }}</td>
 					<td>{{ place.country }}</td>
 					<td>{{ place.latitude }}, {{ place.longitude }}</td>
-					<td><button>Select</button></td>
+					<td><button v-on:click="selectLocation(place)">Select</button></td>
 				</tr>
 			</tbody>
 		</table>
@@ -52,7 +52,7 @@
 			</tbody>
 		</table>
 		<div class="button-actions">
-			<button>Submit Pending Checkins</button>
+			<button v-on:click="submitCheckins">Submit Pending Checkins</button>
 		</div>
 	</section>
 	<hr>

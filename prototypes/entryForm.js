@@ -11,6 +11,30 @@ const app = Vue.createApp({
 	};
   },
   methods: {
+	searchMatch(place) {
+		if (this.searchTerm == '') {
+			return false;
+		}
+		return true;
+	},
+	selectLocation(location) {
+		let checkin = {
+			geoNameID: location.geoNameID,
+			name: location.name,
+			country: location.country,
+			latitude: location.latitude,
+			longitude: location.longitude,
+			entryDateTime: '2021-11-11T11:11:11 CST',
+		}
+		this.pendingCheckins.push(checkin);
+		this.searchTerm = '';
+	},
+	submitCheckins() {
+		// mocking API call save to system.
+		const submitList = this.pendingCheckins;
+		this.checkinHistory.push(...submitList);
+		this.pendingCheckins = [];
+	},
   }
 });
 
