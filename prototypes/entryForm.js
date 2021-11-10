@@ -23,7 +23,23 @@ function loadDirectory() {
 		country: 'AD',
 		latitude: '42.50729',
 		longitude: '1.53414',
-	}
+	},
+	{
+		geoNameID: 292968,
+		name: 'Abu Dhabi',
+		alternateNames: "A-pu-that-pi,AEbu Saby,AUH,Aboe Dhabi,Abou Dabi,Abu Dabi,Abu Dabis,Abu Daby,Abu Daibi,Abu Dhabi,Abu Dhabi Island and Internal Islands City,Abu Dhabi emiraat,Abu Zabi,Abu Zaby,Abu Zabye,Abu Zabyo,Abu Ḍabi,Abu Ḑabi,Abu-Dabi,Abu-Dabi khot,Abu-Dabio,Abu-Dzabi,Abú Dabí,Abú Daibí,Abú Zabí,Abû Daby,Abū Dabī,Abū Z̧aby,Abū Z̧abye,Abū Z̧abyo,Abū Z̧abī,Ampou Ntampi,Ebu Dabi,Ebu Dhabi,a bu zha bi,abu dhabi,abu-dabi,abudabi,abudhabi,abw zby,abwzby,aputapi,jzyrt abwzby wjzr dakhlyt akhry,xa bud abi,Â-pu-tha̍t-pí,Äbu Saby,Əbu-Dabi,Άμπου Ντάμπι,Αμπου Νταμπι,Αμπού Ντάμπι,Абу Даби,Абу-Даби,Абу-Даби хот,Абу-Дабі,Әбу-Даби,Աբու Դաբի,אבו דאבי,أبوظبي,ئەبووزەبی,ابو ظبى,ابوظبی,ابوظہبی,جزيرة أبوظبي وجزر داخلية اخرى,अबु धाबी,अबू धाबी,আবুধাবি,ਅਬੂ ਧਾਬੀ,ଆବୁଧାବି,அபுதாபி,ಅಬು ಧಾಬಿ,അബുദാബി,අබුඩාබි,อาบูดาบี,ཨ་པོའུ་དྷ་པེ།,အဘူဒါဘီမြို့,აბუ-დაბი,አቡ ዳቢ,アブダビ,阿布扎比,아부다비".split(','),
+		country: 'AE',
+		latitude: '24.45118',
+		longitude: '54.39696',
+	},
+	{
+		geoNameID: 5037649,
+		name: 'Minneapolis',
+		alternateNames: "City of Minneapolis,Gakaabikaang,MSP,Min-ni-a-po-li-su,Mineapalis,Mineapoli,Mineapolis,Mineapolisa,Mineápolis,Minneapolis,Minneapòlis,Minnéapolis,Minyapolis,Mìn-nì-â-pô-li-sṳ̂,mineaporisu,minepolisa,ming ni a bo li si,ming ni ya bo li si,miniaepolliseu,miniyapolisa,miniyappolis,minniyapolis,mnyapwls,mynyabwls,mynyapwlys,Μινεάπολη,Минеаполис,Миннеаполис,Мінеапаліс,Міннеаполіс,Մինեապոլիս,מיניאפוליס,منیاپولس,مينيابولس,مینیاپولیس,मिनियापोलिस,मिनीयापोलिस,মিনিয়াপোলিস,મિનેપોલિસ,மினியாப்பொலிஸ்,మిన్నియాపోలిస్,ಮಿನ್ನಿಯಾಪೋಲಿಸ್,มินนีแอโพลิส,მინეაპოლისი,ミネアポリス,明尼亞波利斯,明尼阿波利斯,미니애폴리스".split(','),
+		country: 'US',
+		latitude: '42.50729',
+		longitude: '1.53414',
+	},
 	];
 }
 
