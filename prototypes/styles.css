@@ -1,0 +1,38 @@
+* {
+  font-family: "Nunito Sans",sans-serif;
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+  padding: 1em;
+  background-color: #fafafa;
+}
+table {
+	margin-bottom: .5em;
+}
+
+thead tr {
+	background-color: #bbb;
+}
+tr {
+	margin: 0;
+	padding: 0;
+}
+
+td, th {
+	padding: .25em;
+	padding-left: .75em;
+	min-width: 100px;
+}
+
+button {
+	border-color: navy;
+	background-color: #ccf;
+	border-radius: 5px;
+	padding: 4px 7px;
+}
+
+.button-actions {
+	margin-top: .5em;
+}
