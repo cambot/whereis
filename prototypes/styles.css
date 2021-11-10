@@ -8,6 +8,7 @@ body {
   padding: 1em;
   background-color: #fafafa;
 }
+
 table {
 	margin-bottom: .5em;
 }
@@ -15,9 +16,18 @@ table {
 thead tr {
 	background-color: #bbb;
 }
+
 tr {
 	margin: 0;
 	padding: 0;
+}
+
+tbody tr {
+	transition-duration: .2s;
+}
+tbody tr:hover {
+	background-color: #99f;
+	transition-duration: .5s;
 }
 
 td, th {
@@ -31,6 +41,13 @@ button {
 	background-color: #ccf;
 	border-radius: 5px;
 	padding: 4px 7px;
+	transition-duration: .2s;
+}
+
+button:hover,
+button:focus {
+	background-color: white;
+	transition-duration: .5s;
 }
 
 .button-actions {
