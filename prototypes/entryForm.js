@@ -12,6 +12,9 @@ const app = Vue.createApp({
   },
   methods: {
 	searchMatch(place) {
+		if (place == undefined) {
+			return false;
+		}
 		if (this.searchTerm == '') {
 			return false;
 		}
