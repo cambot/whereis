@@ -12,9 +12,6 @@ const app = Vue.createApp({
   },
   methods: {
 	searchMatch(place) {
-		if (place == undefined) {
-			return false;
-		}
 		if (this.searchTerm == '') {
 			return false;
 		}
@@ -27,8 +24,9 @@ const app = Vue.createApp({
 			country: location.country,
 			latitude: location.latitude,
 			longitude: location.longitude,
-			entryDateTime: '2021-11-11T11:11:11 CST',
 		}
+		const now = new Date();
+		checkin.entryDateTime = now.toISOString();
 		this.pendingCheckins.push(checkin);
 		this.searchTerm = '';
 	},
