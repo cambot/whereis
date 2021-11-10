@@ -52,7 +52,6 @@ function getUserData() {
 			latitude: '41.95837240768071',
 			longitude: '-70.66119558144052',
 			entryDateTime: '2021-11-09T09:11:22 CST',
-
 		}
 		],
 	}
